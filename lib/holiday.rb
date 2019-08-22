@@ -92,6 +92,8 @@ def all_holidays_with_bbq(holiday_hash)
     holidays.map {|holiday, supplies|
       holiday if supplies.include? "BBQ"
     }
-  }.compact
+  }.flatten
 
 end
+
+all_holidays_with_bbq(holiday_supplies)
